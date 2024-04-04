@@ -2,32 +2,349 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Wendy One", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  box-sizing: border-box;
+  background: linear-gradient(to right, rgb(5, 155, 22), rgb(0, 60, 255));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+#container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgb(5, 155, 22), rgb(0, 60, 255));
+  padding: 30px 0; 
+}
+
+.headtext {
+  font-size: 3em;
+  color: white;
+  padding: 5px; 
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+#closeBtn {
+  background-color: black;
+  color: white;
+  border: none;  
+  cursor: pointer;
+  margin-bottom: 15px; 
+}
+
+#itemimage {
+  margin: 15px; 
+}
+
+button {
+  width: 15%;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: black;
+  background-color: white;
+  margin-top: 15px; 
+}
+
+img {
+  width: 30%;
+  margin-bottom: 15px; 
+}
+
+
+.mainimg {
+  max-width: 500px;
+  max-height: 500px;
+  width: 350px;
+  height: 350px; 
+}
+
+
+
+#result {
+  font-size: 18px;
+  color: white;
+  margin-top: 15px; 
+}
+
+.mydiv{
+display: inline-block;
+white-space: nowrap;
+text-overflow: ellipsis;
+vertical-align:bottom
+}
+
+p {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 15px; 
+}
+
+.Adder {
+  justify-content: space-evenly;
+  align-items: start;
+  margin-top: 4px;
+  width: 90%;
+  display: flex;
+  height: 150px;
+  background-color: #ffdab9;
+  border-radius: 20px;
+  color: rgb(29, 1, 6);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Adder > label {
+  height: 50px;
+  width: 25%;
+}
+
+.Adder > label > input {
+  width: 95%;
+  height: 50px;
+}
+
+.addbutton {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 10%px;
+  height: 50px;
+  font-family: "Itim", cursive;
+}
+
+.deletebutton{
+  display: inline-block;
+  vertical-align: bottom;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  right: -5px;
+  font-family: "Itim", cursive;
+}
+
+.deletebutton:hover {
+  background-color: red;
+  color: white;
+}
+
+.editbutton{
+  display: inline-block;
+  vertical-align: bottom;
+  width: 50px;
+  height: 25px;
+  font-family: "Itim", cursive;
+}
+
+.editbutton:hover {
+  background-color: #32CD32;
+  color: #333333;
+ 
+}
+
+
+.addbutton:hover{
+  background-color: #40e0d0;
+  color: #d2691e;
+  color: black;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.spinbutton {
+  width: 500px;
+}
+
+
+.infinitybutton{
+  font-size: 80%;
+  margin: 2px;
+  width: 100%;
+  display: inline-block;
+  font-family: "Itim", cursive;
+}
+
+.infinitybutton:hover{
+  background-color: #808000;
+  color: #e0ffff;
+}
+
+.thistext {
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+.thistext2{
+  font-size: 1.24em;
+}
+
+.quantity-input-container {
+  align-items: center;
+}
+
+.resulttext{
+  font-size: 4em;
+  color: #d40000;
+  background-color: #c0c0c0;
+  margin: 2px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.secimg {
+  height: 300px;
+  width: 500px;
+}
+
+.buttonimg{
+  padding-top: 20px;
+  height: 150px;
+  width: 150px;
+}
+
+.buttonimg:active{
+  transform: translate(-2px, -2px);
+}
+
+.repeat{
+  padding-top: 20px;
+  height: 150px;
+  width: 150px;
+}
+
+.repeat:active{
+  transform: translate(-2px, -2px);
+}
+
+.tips{
+  color: #800080;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding: 5px;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tipsContainer {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #e6e6fa;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.copyright{
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Editor{
+  display: flex;
+  width: 500px; 
+  height: 75px;
+  background-color: #d58742;
+  border-radius: 20px;
+  color: rgb(29, 1, 6);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.changebutton{
+  font-size: 0.75em;
+  margin-top: 30px;
+  margin-left: 4px;
+  width: 50px;
+  height: 30px;
+  font-family: "Itim", cursive;
+}
+
+.infinitybutton2{
+  font-size: 0.75em;
+  width: 75px;
+  height: 20px;
+  display: inline-block;
+  font-family: "Itim", cursive;
+}
+
+.changebutton:hover{
+  background-color: #40e0d0;
+  color: #d2691e;
+  color: black;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.infinitybutton2:hover{
+  background-color: #808000;
+  color: #e0ffff;
+}
+
+.updatebutton{
+  font-size: 1em;
+  font-family: "Itim", cursive;
+  width: 80px;
+  height: 40px;
+}
+
+.editlimitbutton{
+  font-size: 1em;
+  font-family: "Itim", cursive;
+  width: 80px;
+  height: 40px;
+}
+
+.editlimitbutton:hover{
+  background-color: #808000;
+  color: #e0ffff;
+}
+
+.clearbutton{
+  width: 100%;
+  font-size: 80%;
+  margin: 2px;
+  display: inline-block;
+  font-family: "Itim", cursive;
+}
+
+.clearbutton:hover{
+  background-color: violet;
+  color: black;
+}
+
+.updatebutton:hover{
+  background-color: #40e0d0;
+  color: black;
+}
+
+.EditUnlimitedText{
+  font-size: 1.5em;
+  color: #ffffcc;
+  font-weight: 500;
+}
+
+.numberinput{
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  font-size: 1.35em;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.textinput{
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  font-size: 1.35em;
+  margin-right: 5px;
+  margin-left: 5px;
 }
